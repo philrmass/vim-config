@@ -9,18 +9,9 @@ _This project stores my Vim configuration to make it easy to recreate in a new e
 ## Setup And Installation
 
 * Git clone the repository at https://github.com/philrmass/vim-config.git to a local directory
-* Open a terminal program and go to your home directory
-* Create symbolic links to the vimrc file and vimfiles directory
-* On Windows:
-```console
-mklink _vimrc %HOME%\path\to\vim-config\vimrc
-mklink vimfiles %HOME%\path\to\vim-config\vimfiles
-```
-* On Linux:
-```console
-ln -s ~/path/to/vim-config/vimrc ~/.vimrc
-ln -s ~/path/to/vim-config/vimfiles ~/.vim
-```
+* Copy home_vimrc to your home directory
+* Rename it to \_vimrc on Windows or .vimrc on Linux
+* Edit the path in myvim to match the location of the cloned directory
 
 ## Known Bugs
 
