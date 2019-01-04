@@ -12,6 +12,7 @@ _This project stores my Vim configuration to make it easy to recreate in a new e
 * Copy home_vimrc to your home directory
 * Rename it to \_vimrc on Windows or .vimrc on Linux
 * Edit the path in myvim to match the location of the cloned directory
+* Open Vim. Run :PlugInstall to install the vim-plug plugins
 
 ## Known Bugs
 
