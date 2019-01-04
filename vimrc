@@ -8,7 +8,11 @@ map <leader>V :sp ~/_vimrc<Enter>
 " Set vim-plug directory and plugins (:PlugInstall, :PlugUpdate, :PlugDiff)
 call plug#begin('~/.vim/plugged')
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'leshill/vim-json'
+Plug 'ervandew/supertab'
 Plug 'altercation/vim-colors-solarized'
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
 " Set font
@@ -62,8 +66,14 @@ set colorcolumn=80
 set wrap
 map <leader>w :set invwrap<CR>
 
+" Enable omni completion (Ctrl-X Ctrl-O)
+set omnifunc=syntaxcomplete#Complete
+
 " Enable line and column in status
 set ruler
+
+" Set status to always display
+set laststatus=2
 
 " Disable error sound
 set noerrorbells
