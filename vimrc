@@ -1,6 +1,8 @@
 " Set the leader key
 
-set runtimepath+=C:\Users\philmass\projects\vim-config\vimfiles
+"set runtimepath+=expand("%:p:h")."\\vimfiles"
+"echo fnamemodify(expand("$MYVIMRC"), ":p:h")
+"echo expand("%:p:h")."\\vimfiles"
 "set runtimepath=C:\Users\philmass\Documents\Documents\Projects\Code\Vim\vimfiles,$VIM,$VIMRUNTIME
 "source C:\Users\philmass\Documents\Documents\Projects\Code\Vim\_vimrc
 

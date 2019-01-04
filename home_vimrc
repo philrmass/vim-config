@@ -1,0 +1,3 @@
+let myvim = expand("~\\projects\\vim-config")
+execute "set runtimepath+=" . myvim . "\\vimfiles"
+execute "source " . myvim . "\\vimrc"

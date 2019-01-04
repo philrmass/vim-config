@@ -10,7 +10,7 @@ endif
 let g:colors_name = "filmos"
 
 " Cursor
-highlight Normal gui=none guifg=black guibg=white
+highlight Normal gui=none guifg=red guibg=white
 highlight MatchParen gui=none guifg=black guibg=LightSkyBlue
 
 " Syntax group
