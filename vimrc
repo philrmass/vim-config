@@ -12,6 +12,12 @@ Plug 'mxw/vim-jsx'
 Plug 'leshill/vim-json'
 Plug 'ervandew/supertab'
 Plug 'altercation/vim-colors-solarized'
+Plug 'reedes/vim-colors-pencil'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'junegunn/seoul256.vim'
+Plug 'rakr/vim-one'
+Plug 'ayu-theme/ayu-vim'
+Plug 'acarapetis/vim-colors-github'
 Plug 'itchyny/lightline.vim'
 call plug#end()
 
@@ -24,7 +30,8 @@ set guifont=IBM_Plex_Mono_Text:h10:cANSI
 
 " Set colorscheme, enable syntax 
 set background=light
-colorscheme solarized
+let ayucolor="light"
+colorscheme ayu
 syntax on
 
 " Set default size
@@ -50,10 +57,10 @@ nmap <C-L> <C-W>l
 nmap <leader>r :res 1 <Enter>
 
 " Add search cancel with escape
-nnoremap <leader>/ :nohlsearch<Bar>:echo<CR>
+nnoremap <leader>z :nohlsearch<Bar>:echo<CR>
 
 " Add last file open
-nnoremap <leader>z :e#<CR>
+nnoremap <leader>, :e#<CR>
 
 " Enable line numbers, add toggle
 set number
