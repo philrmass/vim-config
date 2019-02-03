@@ -8,8 +8,12 @@ map <leader>V :sp ~/_vimrc<Enter>
 " Set vim-plug directory and plugins (:PlugInstall, :PlugUpdate, :PlugDiff)
 call plug#begin('~/.vim/plugged')
 Plug 'pangloss/vim-javascript'
+Plug 'elixir-editors/vim-elixir'
+Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
 Plug 'leshill/vim-json'
+Plug 'w0rp/ale'
+Plug 'prettier/vim-prettier'
 Plug 'ervandew/supertab'
 Plug 'altercation/vim-colors-solarized'
 Plug 'reedes/vim-colors-pencil'
@@ -20,6 +24,18 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'acarapetis/vim-colors-github'
 Plug 'itchyny/lightline.vim'
 call plug#end()
+
+" Ale plugin setup
+let g:ale_lint_on_text_changed='never'
+let g:ale_lint_on_enter=0
+let g:ale_open_list = 0
+let g:ale_set_highlights = 0
+let g:ale_linters = {
+      \  'javascript': ['eslint']
+      \ }
+
+" Prettier plugin setup
+let g:prettier#config#single_quote='false'
 
 " Set font
 set guifont=IBM_Plex_Mono_Text:h10:cANSI
@@ -42,7 +58,8 @@ set lines=66
 nmap <leader>s :winpos 75 0 <Enter> :set columns=88 lines=66 <Enter>
 nmap <leader>d :winpos 75 0 <Enter> :set columns=112 lines=66 <Enter>
 nmap <leader>f :winpos 75 0 <Enter> :set columns=136 lines=66 <Enter>
-nmap <leader>h :winpos 75 0 <Enter> :set columns=226 lines=66 <Enter>
+nmap <leader>g :winpos 75 0 <Enter> :set columns=226 lines=66 <Enter>
+nmap <leader>h :winpos 600 0 <Enter> :set columns=160 lines=66 <Enter>
 nmap <leader>j :winpos 800 0 <Enter> :set columns=136 lines=66 <Enter>
 nmap <leader>k :winpos 1000 0 <Enter> :set columns=112 lines=66 <Enter>
 nmap <leader>l :winpos 1200 0 <Enter> :set columns=88 lines=66 <Enter>
@@ -57,7 +74,7 @@ nmap <C-L> <C-W>l
 nmap <leader>r :res 1 <Enter>
 
 " Add search cancel with escape
-nnoremap <leader>z :nohlsearch<Bar>:echo<CR>
+nnoremap <leader>/ :nohlsearch<Bar>:echo<CR>
 
 " Add last file open
 nnoremap <leader>, :e#<CR>
@@ -68,6 +85,9 @@ map <leader>n :set invnumber<CR>
 
 " Set color column at 80, add toggle
 set colorcolumn=80
+
+" Wrap lines at words
+set linebreak
 
 " Set line wrap, add toggle
 set wrap
