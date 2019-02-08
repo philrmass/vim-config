@@ -5,13 +5,14 @@ let mapleader=" "
 map <silent> <leader>v :source ~/_vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 map <leader>V :sp ~/_vimrc<Enter>
 
-" Set vim-plug directory and plugins (:PlugInstall, :PlugUpdate, :PlugDiff)
+" Set vim-plug directory and plugins (:PlugInstall, :PlugUpdate, :PlugClean, :PlugDiff)
 call plug#begin('~/.vim/plugged')
 Plug 'pangloss/vim-javascript'
 Plug 'elixir-editors/vim-elixir'
 Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
 Plug 'leshill/vim-json'
+Plug 'mattn/emmet-vim'
 Plug 'w0rp/ale'
 Plug 'prettier/vim-prettier'
 Plug 'ervandew/supertab'
@@ -24,6 +25,9 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'acarapetis/vim-colors-github'
 Plug 'itchyny/lightline.vim'
 call plug#end()
+
+" Emmet plugin setup
+let g:user_emmet_leader_key = '<C-x>'
 
 " Ale plugin setup
 let g:ale_lint_on_text_changed='never'
