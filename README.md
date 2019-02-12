@@ -9,10 +9,18 @@ _This project stores my Vim configuration to make it easy to recreate in a new e
 ## Setup And Installation
 
 * Git clone the repository at https://github.com/philrmass/vim-config.git to a local directory
-* Copy home_vimrc to your home directory
-* Rename it to \_vimrc on Windows or .vimrc on Linux
-* Edit the path in myvim to match the location of the cloned directory
-* Open Vim. Run :PlugInstall to install the vim-plug plugins
+* On Windows:
+  * Copy home_vimrc_windows to your home directory
+  * Rename the file to \_vimrc
+  * Open the file and set the path in myvim to point to the cloned vim-config directory
+* On Unix or Mac:
+  * Copy home_vimrc_unix to your home directory
+  * Rename the file to .vimrc
+  * Open the file and set the path in myvim to point to the cloned vim-config directory
+* To install MacVim (gui Vim on Mac)
+  * Run `brew install macvim` in a terminal
+  * Open with `mvim`
+* Open Vim and type :PlugInstall and enter to install the vim-plug plugins
 
 ## Known Bugs
 
