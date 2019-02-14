@@ -51,7 +51,7 @@ set guifont=IBM_Plex_Mono_Text:h10:cANSI
 " Set colorscheme, enable syntax 
 set background=light
 let ayucolor="light"
-colorscheme ayu
+colorscheme seoul256
 syntax on
 
 " Set default size
