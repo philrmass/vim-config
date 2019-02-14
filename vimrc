@@ -83,6 +83,9 @@ nnoremap <leader>/ :nohlsearch<Bar>:echo<CR>
 " Add last file open
 nnoremap <leader>, :e#<CR>
 
+" Change to unix file endings
+nmap <leader>u :set ff=unix <Enter>
+
 " Enable line numbers, add toggle
 set number
 map <leader>n :set invnumber<CR>
