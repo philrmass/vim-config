@@ -48,9 +48,8 @@ set guifont=IBM_Plex_Mono_Text:h10:cANSI
 "set guifont=Menlo_Regular:h10:cANSI
 "set guifont=Liberation_Mono:h10:cANSI
 
-" Set colorscheme, enable syntax 
-set background=light
-let ayucolor="light"
+" Set colorscheme, enable syntax colors
+set background=dark
 colorscheme seoul256
 syntax on
 
@@ -67,6 +66,9 @@ nmap <leader>h :winpos 600 0 <Enter> :set columns=160 lines=66 <Enter>
 nmap <leader>j :winpos 800 0 <Enter> :set columns=136 lines=66 <Enter>
 nmap <leader>k :winpos 1000 0 <Enter> :set columns=112 lines=66 <Enter>
 nmap <leader>l :winpos 1200 0 <Enter> :set columns=88 lines=66 <Enter>
+
+" Add top split
+nmap <leader>t :top sp<Space>
 
 " Add split movements
 nmap <C-J> <C-W>j
