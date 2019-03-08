@@ -67,6 +67,9 @@ nmap <leader>j :winpos 800 0 <Enter> :set columns=136 lines=66 <Enter>
 nmap <leader>k :winpos 1000 0 <Enter> :set columns=112 lines=66 <Enter>
 nmap <leader>l :winpos 1200 0 <Enter> :set columns=88 lines=66 <Enter>
 
+" Expand tree depth of file explorer (0 = default, 3 = tree)
+let g:netrw_liststyle=3
+
 " Add top split
 nmap <leader>t :top sp<Space>
 
