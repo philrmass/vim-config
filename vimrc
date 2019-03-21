@@ -132,3 +132,8 @@ filetype plugin indent on
 " Improve the search
 set hlsearch
 set incsearch
+
+" Search and replace in multiple files, using quickfix window (:copen to see
+" files)
+" :grep -rsI searchTerm *
+" :cdo %s/searchTerm/newTerm/gc | update
