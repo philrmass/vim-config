@@ -7,27 +7,27 @@ map <leader>V :sp ~/_vimrc<Enter>
 
 " Set vim-plug directory and plugins (:PlugInstall, :PlugUpdate, :PlugClean, :PlugDiff)
 call plug#begin('~/.vim/plugged')
-Plug 'pangloss/vim-javascript'
-Plug 'elixir-editors/vim-elixir'
-Plug 'leafgarland/typescript-vim'
-Plug 'mxw/vim-jsx'
-Plug 'leshill/vim-json'
-Plug 'mattn/emmet-vim'
-Plug 'w0rp/ale'
-Plug 'prettier/vim-prettier'
-Plug 'ervandew/supertab'
-Plug 'altercation/vim-colors-solarized'
-Plug 'reedes/vim-colors-pencil'
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'junegunn/seoul256.vim'
-Plug 'rakr/vim-one'
-Plug 'ayu-theme/ayu-vim'
-Plug 'acarapetis/vim-colors-github'
 Plug 'itchyny/lightline.vim'
+Plug 'junegunn/seoul256.vim'
+Plug 'mattn/emmet-vim'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'w0rp/ale'
+"Plug 'elixir-editors/vim-elixir'
+"Plug 'leafgarland/typescript-vim'
+"Plug 'leshill/vim-json'
+"Plug 'prettier/vim-prettier'
+"Plug 'ervandew/supertab'
+"Plug 'altercation/vim-colors-solarized'
+"Plug 'reedes/vim-colors-pencil'
+"Plug 'NLKNguyen/papercolor-theme'
+"Plug 'rakr/vim-one'
+"Plug 'ayu-theme/ayu-vim'
+"Plug 'acarapetis/vim-colors-github'
 call plug#end()
 
 " Emmet plugin setup
-let g:user_emmet_leader_key = '<C-x>'
+let g:user_emmet_leader_key = '<Tab>'
 
 " Ale plugin setup
 let g:ale_lint_on_text_changed='never'
@@ -39,19 +39,34 @@ let g:ale_linters = {
       \ }
 
 " Prettier plugin setup
-let g:prettier#config#single_quote='false'
+"let g:prettier#config#single_quote='false'
 
 " Set font
-set guifont=IBM_Plex_Mono_Text:h10:cANSI
-"set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
 "set guifont=DejaVu_Sans_Mono:h10:cANSI
 "set guifont=Menlo_Regular:h10:cANSI
 "set guifont=Liberation_Mono:h10:cANSI
+"set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
+"set guifont=Consolas:h11:cANSI
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 12
+  elseif has("gui_macvim")
+    set guifont=Menlo:h15
+  elseif has("gui_win32")
+    set guifont=IBM_Plex_Mono_Text:h10:cANSI
+  else
+    set guifont=Courier
+  endif
+endif
 
 " Set colorscheme, enable syntax colors
-set background=dark
-colorscheme seoul256
 syntax on
+set background=dark
+try
+  colorscheme seoul256
+catch
+  colorscheme desert
+endtry
 
 " Set default size
 set columns=112
@@ -126,6 +141,8 @@ set smartindent
 set expandtab
 set tabstop=2
 set shiftwidth=2
+:runtime macros/matchit.vim
+filetype indent on
 filetype plugin on
 filetype plugin indent on
 
