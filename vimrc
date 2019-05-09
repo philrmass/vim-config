@@ -31,12 +31,20 @@ let g:user_emmet_leader_key = '<Tab>'
 
 " Ale plugin setup
 let g:ale_lint_on_text_changed='never'
-let g:ale_lint_on_enter=0
-let g:ale_open_list = 0
-let g:ale_set_highlights = 0
+let g:ale_lint_on_enter=1
+let g:ale_open_list=0
+let g:ale_set_highlights=0
 let g:ale_linters = {
       \  'javascript': ['eslint']
       \ }
+let g:ale_fix_on_save=0
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\}
+nmap <leader>i <Plug>(ale_fix)
+nmap <leader>[ :lprevious <Enter>
+nmap <leader>] :lnext <Enter>
 
 " Prettier plugin setup
 "let g:prettier#config#single_quote='false'
@@ -96,7 +104,7 @@ nmap <C-K> <C-W>k
 nmap <C-H> <C-W>h
 nmap <C-L> <C-W>l
 
-" Add split sizing 
+" Add split sizing
 nmap <leader>r :res 1 <Enter>
 
 " Add search cancel with escape
