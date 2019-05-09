@@ -7,22 +7,22 @@ map <leader>V :sp ~/_vimrc<Enter>
 
 " Set vim-plug directory and plugins (:PlugInstall, :PlugUpdate, :PlugClean, :PlugDiff)
 call plug#begin('~/.vim/plugged')
+Plug 'altercation/vim-colors-solarized'
+Plug 'ayu-theme/ayu-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'mattn/emmet-vim'
 Plug 'mxw/vim-jsx'
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'pangloss/vim-javascript'
+Plug 'rakr/vim-one'
+Plug 'reedes/vim-colors-pencil'
 Plug 'w0rp/ale'
 "Plug 'elixir-editors/vim-elixir'
 "Plug 'leafgarland/typescript-vim'
 "Plug 'leshill/vim-json'
 "Plug 'prettier/vim-prettier'
 "Plug 'ervandew/supertab'
-"Plug 'altercation/vim-colors-solarized'
-"Plug 'reedes/vim-colors-pencil'
-"Plug 'NLKNguyen/papercolor-theme'
-"Plug 'rakr/vim-one'
-"Plug 'ayu-theme/ayu-vim'
 "Plug 'acarapetis/vim-colors-github'
 call plug#end()
 
