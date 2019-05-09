@@ -45,6 +45,11 @@ let g:ale_fixers = {
 nmap <leader>i <Plug>(ale_fix)
 nmap <leader>[ :lprevious <Enter>
 nmap <leader>] :lnext <Enter>
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = "◉"
+
+" To keep left gutter open all the time
+":set signcolumn=yes
 
 " Prettier plugin setup
 "let g:prettier#config#single_quote='false'
@@ -75,6 +80,10 @@ try
 catch
   colorscheme desert
 endtry
+
+" Override colors for eslint
+:highlight ALEErrorSign ctermbg=NONE guifg=#ff0000
+:highlight ALEWarningSign ctermbg=NONE guifg=#ffff00
 
 " Set default size
 set columns=112
