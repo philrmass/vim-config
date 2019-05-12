@@ -43,10 +43,10 @@ let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \}
 nmap <leader>i <Plug>(ale_fix)
-nmap <leader>[ :lprevious <Enter>
-nmap <leader>] :lnext <Enter>
-let g:ale_sign_error = ' x'
-let g:ale_sign_warning = ' -'
+nmap <leader>[ :ALEPrevious <Enter>
+nmap <leader>] :ALENext <Enter>
+let g:ale_sign_error='xx'
+let g:ale_sign_warning='--'
 
 " To keep left gutter open all the time
 ":set signcolumn=yes
