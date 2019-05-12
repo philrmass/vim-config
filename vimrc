@@ -45,8 +45,8 @@ let g:ale_fixers = {
 nmap <leader>i <Plug>(ale_fix)
 nmap <leader>[ :lprevious <Enter>
 nmap <leader>] :lnext <Enter>
-let g:ale_sign_error = ' ✘'
-let g:ale_sign_warning = " ◉"
+let g:ale_sign_error = ' x'
+let g:ale_sign_warning = ' -'
 
 " To keep left gutter open all the time
 ":set signcolumn=yes
