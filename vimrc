@@ -18,12 +18,10 @@ Plug 'pangloss/vim-javascript'
 Plug 'rakr/vim-one'
 Plug 'reedes/vim-colors-pencil'
 Plug 'w0rp/ale'
+Plug 'maximbaz/lightline-ale'
 "Plug 'elixir-editors/vim-elixir'
 "Plug 'leafgarland/typescript-vim'
 "Plug 'leshill/vim-json'
-"Plug 'prettier/vim-prettier'
-"Plug 'ervandew/supertab'
-"Plug 'acarapetis/vim-colors-github'
 call plug#end()
 
 " Emmet plugin setup
@@ -51,8 +49,24 @@ let g:ale_sign_warning='--'
 " To keep left gutter open all the time
 ":set signcolumn=yes
 
-" Prettier plugin setup
-"let g:prettier#config#single_quote='false'
+" Lightline plugin setup
+let g:lightline = {}
+let g:lightline.component_expand = {
+      \  'linter_checking': 'lightline#ale#checking',
+      \  'linter_warnings': 'lightline#ale#warnings',
+      \  'linter_errors': 'lightline#ale#errors',
+      \  'linter_ok': 'lightline#ale#ok',
+      \ }
+let g:lightline.component_type = {
+      \     'linter_checking': 'left',
+      \     'linter_warnings': 'warning',
+      \     'linter_errors': 'error',
+      \     'linter_ok': 'left',
+      \ }
+let g:lightline.active = { 'right': [[ 'lineinfo' ],
+      \                              [ 'percent' ],
+      \                              [ 'fileformat', 'fileencoding', 'filetype' ],
+      \                              [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ]] }
 
 " Set font
 "set guifont=DejaVu_Sans_Mono:h10:cANSI
@@ -131,6 +145,9 @@ map <leader>n :set invnumber<CR>
 
 " Set color column at 80, add toggle
 set colorcolumn=80
+
+" Don't fix file misisng last newline
+set nofixendofline
 
 " Wrap lines at words
 set linebreak
