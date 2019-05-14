@@ -45,6 +45,7 @@ nmap <leader>[ :ALEPrevious <Enter>
 nmap <leader>] :ALENext <Enter>
 let g:ale_sign_error='xx'
 let g:ale_sign_warning='--'
+let g:ale_echo_msg_format='%linter%: %s'
 
 " To keep left gutter open all the time
 ":set signcolumn=yes
