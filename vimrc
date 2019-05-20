@@ -100,6 +100,12 @@ endtry
 :highlight ALEErrorSign ctermbg=NONE guifg=#ff0000
 :highlight ALEWarningSign ctermbg=NONE guifg=#ffff00
 
+" Override colors for vimdiff
+:highlight DiffAdd gui=NONE guifg=#40ff40 guibg=#5b5b5b
+:highlight DiffChange gui=NONE guifg=#8080ff guibg=#5b5b5b
+:highlight DiffDelete gui=NONE guifg=#ff4040 guibg=#5b5b5b
+:highlight DiffText gui=NONE guifg=#8080ff guibg=#5b5b5b
+
 " Set default size
 set columns=112
 set lines=66
