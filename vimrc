@@ -107,8 +107,13 @@ endtry
 :highlight DiffText gui=NONE guifg=#8080ff guibg=#5b5b5b
 
 " Set default size
-set columns=112
-set lines=66
+if &diff
+  set columns=260
+  set lines=72
+else
+  set columns=110
+  set lines=66
+endif
 
 " Add window resizing
 nmap <leader>s :winpos 75 0 <Enter> :set columns=88 lines=66 <Enter>
@@ -186,6 +191,9 @@ set shiftwidth=2
 filetype indent on
 filetype plugin on
 filetype plugin indent on
+
+" Add alternate text completion hotkey
+imap <C-z> <c-n>
 
 " Improve the search
 set hlsearch
