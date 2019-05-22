@@ -139,8 +139,12 @@ nmap <C-K> <C-W>k
 nmap <C-H> <C-W>h
 nmap <C-L> <C-W>l
 
-" Add split sizing
+" Add window resizing
 nmap <leader>r :res 1 <Enter>
+nmap <C-Y> <C-W>5><CR>
+nmap <C-U> <C-W>2+<CR>
+nmap <C-I> <C-W>2-<CR>
+nmap <C-O> <C-W>5<<CR>
 
 " Add search cancel with escape
 nnoremap <leader>/ :nohlsearch<Bar>:echo<CR>
