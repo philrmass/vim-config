@@ -102,9 +102,9 @@ endtry
 
 " Override colors for vimdiff
 :highlight DiffAdd gui=NONE guifg=#40ff40 guibg=#5b5b5b
-:highlight DiffChange gui=NONE guifg=#8080ff guibg=#5b5b5b
+:highlight DiffChange gui=NONE guifg=#40b0ff guibg=#5b5b5b
 :highlight DiffDelete gui=NONE guifg=#ff4040 guibg=#5b5b5b
-:highlight DiffText gui=NONE guifg=#8080ff guibg=#5b5b5b
+:highlight DiffText gui=NONE guifg=#40ffff guibg=#5b5b5b
 
 " Set default size
 if &diff
