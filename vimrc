@@ -3,21 +3,14 @@ let mapleader=" "
 
 " Set vim-plug directory and plugins (:PlugInstall, :PlugUpdate, :PlugClean, :PlugDiff)
 call plug#begin('~/.vim/plugged')
-Plug 'altercation/vim-colors-solarized'
-Plug 'ayu-theme/ayu-vim'
-Plug 'itchyny/lightline.vim'
 Plug 'junegunn/seoul256.vim'
-Plug 'mattn/emmet-vim'
 Plug 'mxw/vim-jsx'
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'pangloss/vim-javascript'
-Plug 'rakr/vim-one'
-Plug 'reedes/vim-colors-pencil'
-Plug 'w0rp/ale'
+Plug 'leshill/vim-json'
+Plug 'w0rp/ale', { 'tag': 'v2.4.1' }
+Plug 'mattn/emmet-vim'
+Plug 'itchyny/lightline.vim'
 Plug 'maximbaz/lightline-ale'
-"Plug 'elixir-editors/vim-elixir'
-"Plug 'leafgarland/typescript-vim'
-"Plug 'leshill/vim-json'
 call plug#end()
 
 " Emmet plugin setup
@@ -28,9 +21,7 @@ let g:ale_lint_on_text_changed='never'
 let g:ale_lint_on_enter=1
 let g:ale_open_list=0
 let g:ale_set_highlights=0
-let g:ale_linters = {
-      \  'javascript': ['eslint']
-      \ }
+let g:ale_linters = {'javascript': ['eslint']}
 let g:ale_fix_on_save=0
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
@@ -103,13 +94,7 @@ endtry
 :highlight DiffText gui=NONE guifg=#40ffff guibg=#5b5b5b
 
 " Set default size
-if &diff
-  set columns=260
-  set lines=72
-else
-  set columns=110
-  set lines=66
-endif
+:set columns=100
 
 " Add window resizing
 nmap <leader>s :winpos 75 0 <Enter> :set columns=88 lines=66 <Enter>

@@ -4,3 +4,10 @@ execute "source " . myvim . "/vimrc"
 
 map <silent> <leader>v :source ~/.vimrc<CR>:filetype detect<CR>:echo "vimrc reloaded"<CR>
 map <leader>V :sp ~/.vimrc<CR>
+
+if &diff
+  set columns=200
+  set lines=60
+  winpos 0 0
+endif
+
