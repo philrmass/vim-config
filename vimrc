@@ -1,10 +1,6 @@
 " Set the leader key
 let mapleader=" "
 
-" Add _vimrc reload and open
-map <silent> <leader>v :source ~/_vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
-map <leader>V :sp ~/_vimrc<Enter>
-
 " Set vim-plug directory and plugins (:PlugInstall, :PlugUpdate, :PlugClean, :PlugDiff)
 call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
