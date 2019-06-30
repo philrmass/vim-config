@@ -1,3 +1,6 @@
 let myvim = expand("~\\projects\\vim-config")
 execute "set runtimepath+=" . myvim . "\\vimfiles"
 execute "source " . myvim . "\\vimrc"
+
+map <silent> <leader>v :source ~/_vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+map <leader>V :sp ~/_vimrc<Enter>
