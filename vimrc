@@ -140,8 +140,8 @@ nmap <leader>u :set ff=unix <Enter>
 set number
 map <leader>n :set invnumber<CR>
 
-" Set color column at 80, add toggle
-set colorcolumn=80
+" Set color column at 120, add toggle
+set colorcolumn=120
 
 " Don't fix file misisng last newline
 set nofixendofline
@@ -184,6 +184,13 @@ imap <C-z> <c-n>
 set hlsearch
 set incsearch
 
+" Add git blame support
+fun! GitCommand(command)
+  silent! !clear
+  exec "!git " . a:command . " %"
+endfun
+
+map <leader>b :call GitCommand("blame") <CR>
 " Search and replace in multiple files, using quickfix window (:copen to see
 " files)
 " :grep -rsI searchTerm *
