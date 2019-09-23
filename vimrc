@@ -4,13 +4,16 @@ let mapleader=" "
 " Set vim-plug directory and plugins (:PlugInstall, :PlugUpdate, :PlugClean, :PlugDiff)
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/seoul256.vim'
-Plug 'mxw/vim-jsx'
-Plug 'pangloss/vim-javascript'
 Plug 'leshill/vim-json'
+Plug 'pangloss/vim-javascript'
+" Plug 'mxw/vim-jsx'
+" Plug 'neoclide/vim-jsx-improve'
+Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'w0rp/ale', { 'tag': 'v2.4.1' }
 Plug 'mattn/emmet-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'maximbaz/lightline-ale'
+Plug 'zivyangll/git-blame.vim'
 call plug#end()
 
 " Emmet plugin setup
@@ -62,6 +65,10 @@ let g:lightline.active = { 'right': [[ 'lineinfo' ],
 "set guifont=Liberation_Mono:h10:cANSI
 "set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
 "set guifont=Consolas:h11:cANSI
+
+" Set map for git blame
+nnoremap <leader>q :<C-u>call gitblame#echo()<CR>
+
 if has("gui_running")
   if has("gui_gtk2")
     set guifont=Inconsolata\ 12
