@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/seoul256.vim'
 Plug 'leshill/vim-json'
 Plug 'pangloss/vim-javascript'
+Plug 'jparise/vim-graphql'
 " Plug 'mxw/vim-jsx'
 " Plug 'neoclide/vim-jsx-improve'
 Plug 'MaxMEllon/vim-jsx-pretty'
@@ -151,7 +152,7 @@ map <leader>n :set invnumber<CR>
 set colorcolumn=120
 
 " Don't fix file misisng last newline
-set nofixendofline
+"set nofixendofline
 
 " Wrap lines at words
 set linebreak
