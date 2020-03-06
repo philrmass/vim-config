@@ -178,7 +178,7 @@ set visualbell
 set autoindent
 set smartindent
 set expandtab
-set tabstop=2
+set tabstop=16
 set shiftwidth=2
 :runtime macros/matchit.vim
 filetype indent on
