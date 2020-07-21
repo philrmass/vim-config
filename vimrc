@@ -15,6 +15,7 @@ Plug 'mattn/emmet-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'maximbaz/lightline-ale'
 Plug 'zivyangll/git-blame.vim'
+Plug 'jasonshell/vim-svg-indent'
 call plug#end()
 
 " Emmet plugin setup
