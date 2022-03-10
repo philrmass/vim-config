@@ -3,19 +3,21 @@ let mapleader=" "
 
 " Set vim-plug directory and plugins (:PlugInstall, :PlugUpdate, :PlugClean, :PlugDiff)
 call plug#begin('~/.vim/plugged')
+Plug 'itchyny/lightline.vim'
+Plug 'jasonshell/vim-svg-indent'
+Plug 'jparise/vim-graphql'
 Plug 'junegunn/seoul256.vim'
 Plug 'leshill/vim-json'
-Plug 'pangloss/vim-javascript'
-Plug 'jparise/vim-graphql'
+Plug 'mattn/emmet-vim'
+Plug 'maximbaz/lightline-ale'
+Plug 'MaxMEllon/vim-jsx-pretty'
 " Plug 'mxw/vim-jsx'
 " Plug 'neoclide/vim-jsx-improve'
-Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
 Plug 'w0rp/ale', { 'tag': 'v2.4.1' }
-Plug 'mattn/emmet-vim'
-Plug 'itchyny/lightline.vim'
-Plug 'maximbaz/lightline-ale'
 Plug 'zivyangll/git-blame.vim'
-Plug 'jasonshell/vim-svg-indent'
 call plug#end()
 
 " Emmet plugin setup
