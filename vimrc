@@ -107,21 +107,21 @@ endtry
 
 " Set default size
 :set columns=100
+:set lines=66
 
 " Add window resizing
-nmap <leader>s :winpos 75 0 <Enter> :set columns=88 lines=66 <Enter>
-nmap <leader>d :winpos 75 0 <Enter> :set columns=112 lines=66 <Enter>
-nmap <leader>f :winpos 75 0 <Enter> :set columns=136 lines=66 <Enter>
-nmap <leader>g :winpos 75 0 <Enter> :set columns=226 lines=66 <Enter>
-nmap <leader>h :winpos 600 0 <Enter> :set columns=160 lines=66 <Enter>
-nmap <leader>j :winpos 800 0 <Enter> :set columns=136 lines=66 <Enter>
-nmap <leader>k :winpos 1000 0 <Enter> :set columns=112 lines=66 <Enter>
-nmap <leader>l :winpos 1200 0 <Enter> :set columns=88 lines=66 <Enter>
+nmap <leader>m0 :winpos 0 0 <Enter> :set columns=88 lines=66 <Enter>
+nmap <leader>m1 :winpos 2000 0 <Enter> :set columns=150 lines=90 <Enter>
+nmap <leader>s0 :set columns=200 lines=100 <Enter>
+nmap <leader>s1 :set columns=110 lines=90 <Enter>
+nmap <leader>s2 :set columns=90 lines=70 <Enter>
 
 " Expand tree depth of file explorer (0 = default, 3 = tree)
 let g:netrw_liststyle=3
-nmap <leader>e :let netrw_liststyle=3 <Enter>
-nmap <leader>c :let netrw_liststyle=0 <Enter>
+nmap <leader>l0 :let g:netrw_liststyle=0 <Enter>
+nmap <leader>l1 :let g:netrw_liststyle=1 <Enter>
+nmap <leader>l2 :let g:netrw_liststyle=2 <Enter>
+nmap <leader>l3 :let g:netrw_liststyle=3 <Enter>
 
 " Add top split
 nmap <leader>t :top sp<Space>
