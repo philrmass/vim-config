@@ -29,11 +29,13 @@ let g:ale_lint_on_text_changed='never'
 let g:ale_lint_on_enter=1
 let g:ale_open_list=0
 let g:ale_set_highlights=0
+let g:ale_linter_aliases = {'javascriptreact': ['javascript']}
 let g:ale_linters = {'javascript': ['eslint']}
 let g:ale_fix_on_save=0
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['eslint'],
+\   'javascriptreact': ['eslint'],
 \}
 nmap <leader>i <Plug>(ale_fix)
 nmap <leader>[ :ALEPrevious <Enter>
@@ -112,9 +114,9 @@ endtry
 " Add window resizing
 nmap <leader>m0 :winpos 0 0 <Enter> :set columns=88 lines=66 <Enter>
 nmap <leader>m1 :winpos 2000 0 <Enter> :set columns=150 lines=90 <Enter>
-nmap <leader>s0 :set columns=200 lines=100 <Enter>
-nmap <leader>s1 :set columns=110 lines=90 <Enter>
-nmap <leader>s2 :set columns=90 lines=70 <Enter>
+nmap <leader>b :set columns=200 lines=100 <Enter>
+nmap <leader>m :set columns=110 lines=90 <Enter>
+nmap <leader>s :set columns=90 lines=70 <Enter>
 
 " Expand tree depth of file explorer (0 = default, 3 = tree)
 let g:netrw_liststyle=3
