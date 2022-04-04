@@ -36,6 +36,7 @@ let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['eslint'],
 \   'javascriptreact': ['eslint'],
+\   'scss': ['stylelint'],
 \}
 nmap <leader>i <Plug>(ale_fix)
 nmap <leader>[ :ALEPrevious <Enter>
@@ -112,8 +113,8 @@ endtry
 :set lines=66
 
 " Add window resizing
-nmap <leader>m0 :winpos 0 0 <Enter> :set columns=88 lines=66 <Enter>
-nmap <leader>m1 :winpos 2000 0 <Enter> :set columns=150 lines=90 <Enter>
+nmap <leader>ll :winpos 2000 0 <Enter> :set columns=150 lines=97 <Enter>
+nmap <leader>rr :winpos 3008 0 <Enter> :set columns=150 lines=97 <Enter>
 nmap <leader>b :set columns=200 lines=100 <Enter>
 nmap <leader>m :set columns=110 lines=90 <Enter>
 nmap <leader>s :set columns=90 lines=70 <Enter>
