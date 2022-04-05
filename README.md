@@ -22,16 +22,32 @@ _This project stores my Vim configuration to make it easy to recreate in a new e
   * Open with `mvim`
 * Open Vim and type :PlugInstall and enter to install the vim-plug plugins
 
-## Known Bugs
-
-_None_
-
-## Support and Contact Details
-
-If you have any issues or questions, please email me at philrmass@gmail.com
+## Keyboard Shortcuts
+- Press `SPACE` before these shortcuts:
+  - `[` - go to previous lint error
+  - `]` - go to next lint error
+  - `b` - show git blame for the line
+  - `bb` - show git blame for the buffer
+  - `i` - fix lint errors
+  - `l` - size window for work large
+  - `ll` - move and size window for work left
+  - `m` - size window for work medium
+  - `n` - toggle line numbers
+  - `r` - make buffer small
+  - `rr` - move and size window for work right
+  - `s` - size window for work small
+  - `t` - add a top split
+  - `w` - toggle line wrap
+- Press `CTRL` before these shortcuts:
+  - `h` - go left a split
+  - `i` - make buffer split shorter 
+  - `j` - go down a split
+  - `k` - go up a split
+  - `l` - go right a split
+  - `o` - make buffer split narrower
+  - `u` - make buffer split taller
+  - `y` - make buffer split wider
 
 ## Legal
 
-Copyright (c) 2018 Phil Mass
-
-This software is licensed under the MIT License
+Copyright (c) 2021 Phil Mass

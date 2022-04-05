@@ -74,9 +74,6 @@ let g:lightline.active = { 'right': [[ 'lineinfo' ],
 "set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
 "set guifont=Consolas:h11:cANSI
 
-" Set map for git blame
-nnoremap <leader>q :<C-u>call gitblame#echo()<CR>
-
 if has("gui_running")
   if has("gui_gtk2")
     set guifont=Inconsolata\ 12
@@ -113,18 +110,18 @@ endtry
 :set lines=66
 
 " Add window resizing
-nmap <leader>ll :winpos 2000 0 <Enter> :set columns=150 lines=97 <Enter>
-nmap <leader>rr :winpos 3008 0 <Enter> :set columns=150 lines=97 <Enter>
-nmap <leader>b :set columns=200 lines=100 <Enter>
+nmap <leader>ll :winpos 2000 0 <Enter> :set columns=150 lines=99 <Enter>
+nmap <leader>rr :winpos 3008 0 <Enter> :set columns=150 lines=99 <Enter>
+nmap <leader>l :set columns=150 lines=99 <Enter>
 nmap <leader>m :set columns=110 lines=90 <Enter>
-nmap <leader>s :set columns=90 lines=70 <Enter>
+nmap <leader>s :set columns=80 lines=40 <Enter>
 
 " Expand tree depth of file explorer (0 = default, 3 = tree)
 let g:netrw_liststyle=3
-nmap <leader>l0 :let g:netrw_liststyle=0 <Enter>
-nmap <leader>l1 :let g:netrw_liststyle=1 <Enter>
-nmap <leader>l2 :let g:netrw_liststyle=2 <Enter>
-nmap <leader>l3 :let g:netrw_liststyle=3 <Enter>
+nmap <leader>tt0 :let g:netrw_liststyle=0 <Enter>
+nmap <leader>tt1 :let g:netrw_liststyle=1 <Enter>
+nmap <leader>tt2 :let g:netrw_liststyle=2 <Enter>
+nmap <leader>tt3 :let g:netrw_liststyle=3 <Enter>
 
 " Add top split
 nmap <leader>t :top sp<Space>
@@ -205,7 +202,10 @@ fun! GitCommand(command)
   exec "!git " . a:command . " %"
 endfun
 
-map <leader>b :call GitCommand("blame") <CR>
+" Set shortcut for git blame
+nnoremap <leader>b :<C-u>call gitblame#echo()<CR>
+map <leader>bb :call GitCommand("blame") <CR>
+
 " Search and replace in multiple files, using quickfix window (:copen to see
 " files)
 " :grep -rsI searchTerm *
