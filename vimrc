@@ -38,6 +38,7 @@ let g:ale_fixers = {
 \   'javascriptreact': ['eslint'],
 \   'ruby': ['rubocop'],
 \   'scss': ['stylelint'],
+\   'css': ['stylelint'],
 \}
 nmap <leader>i <Plug>(ale_fix)
 nmap <leader>[ :ALEPrevious <Enter>
