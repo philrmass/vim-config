@@ -108,12 +108,14 @@ endtry
 :highlight DiffText gui=NONE guifg=#40ffff guibg=#5b5b5b
 
 " Set default size
+:set guioptions+=k
 :set columns=100
 :set lines=66
 
 " Add window resizing
 nmap <leader>ll :winpos 2000 0 <Enter> :set columns=150 lines=99 <Enter>
 nmap <leader>rr :winpos 3008 0 <Enter> :set columns=150 lines=99 <Enter>
+nmap <leader>ss :winpos -1468 75 <Enter> :set columns=170 lines=99 <Enter>
 nmap <leader>x :set columns=180 lines=99 <Enter>
 nmap <leader>l :set columns=150 lines=99 <Enter>
 nmap <leader>m :set columns=110 lines=90 <Enter>
