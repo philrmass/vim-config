@@ -37,6 +37,7 @@ let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \   'javascriptreact': ['eslint'],
 \   'ruby': ['rubocop'],
+\   'rust': ['rustfmt'],
 \   'scss': ['stylelint'],
 \   'css': ['stylelint'],
 \}
