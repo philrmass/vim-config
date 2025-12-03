@@ -3,6 +3,7 @@ let mapleader=" "
 
 " Set vim-plug directory and plugins (:PlugInstall, :PlugUpdate, :PlugClean, :PlugDiff)
 call plug#begin('~/.vim/plugged')
+Plug 'github/copilot.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'jasonshell/vim-svg-indent'
 Plug 'jparise/vim-graphql'
